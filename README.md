@@ -1,1 +1,2 @@
 # Lowest-Common-Ancestor-Java
+This repository contains my Java implementation of the lowest commmon ancestor task for CSU33012 (Software Engineering). I chose Java because it was a language I am familiar with, and I was able to come up with a good solution with relative ease.
