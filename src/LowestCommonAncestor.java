@@ -6,36 +6,6 @@ public class LowestCommonAncestor {
 	private List<Integer> firstPath = new ArrayList<>();
 	private List<Integer> secondPath = new ArrayList<>();
 
-
-    public static void main(String[] args)
-    {
-    	LowestCommonAncestor tree = new LowestCommonAncestor();
-    	
-    	/*
-    	 * Here's an example binary tree we can make.
-    	 * 
-    	 *   			      1
-    	 *       			/   \
-    	 *      		   2     3
-    	 *     			  / \   / \
-    	 *   			 4   5 6   7
-    	 *
-    	 */
-    	
-        tree.root = new Node(1);
-        tree.root.left = new Node(2);
-        tree.root.right = new Node(3);
-        tree.root.left.left = new Node(4);
-        tree.root.left.right = new Node(5);
-        tree.root.right.left = new Node(6);
-        tree.root.right.right = new Node(7);
- 
-        System.out.println("LCA(4, 5): " + tree.findLCA(4,5)); //this will be 2!
-        System.out.println("LCA(4, 6): " + tree.findLCA(4,6)); //this will be 1!
-        System.out.println("LCA(3, 4): " + tree.findLCA(3,4)); //this will be 1!
-        System.out.println("LCA(2, 4): " + tree.findLCA(2,4)); //this will be 2!     
-    }
-
 	/* 
 	 * This function finds the path from root node to a given root of the tree.
 	 * Parameters: 2 integers n1 and n2.
@@ -63,8 +33,6 @@ public class LowestCommonAncestor {
 	 */
 	private int findLCAInternal(Node root, int n1, int n2) {
 		if (!findPath(root, n1, firstPath) || !findPath(root, n2, secondPath)) {
-			System.out.println((firstPath.size() > 0) ? "n1 is present!" : "n1 is missing!");
-			System.out.println((secondPath.size() > 0) ? "n2 is present!" : "n2 is missing!");
 			return -1;
 		}
 		int i;
