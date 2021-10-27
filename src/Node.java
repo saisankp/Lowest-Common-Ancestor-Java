@@ -1,10 +1,9 @@
-//A Binary Tree node
 class Node {
 	int data;
-	Node left, right;
+	Node[] child;
 
-	Node(int value) {
-		data = value;
-		left = right = null;
+	Node (int data, Node[] child){
+		this.data = data;
+		this.child=child;
 	}
 }
