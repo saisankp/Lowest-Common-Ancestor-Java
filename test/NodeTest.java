@@ -8,22 +8,11 @@ class NodeTest {
 
 	@BeforeAll
 	static void declareNodes() {
-		firstNode = new Node(1);
+		firstNode = new Node(1, new Node [] {new Node(9, null), new Node(8,null)});
 	}
 
 	@Test
 	public void constructorTest(){
 		assertEquals(1,firstNode.data);
-	}
-	
-	
-	@Test
-	public void assertLeftToNodeIsNull(){
-		assertEquals(null,firstNode.left);
-	}
-	
-	@Test
-	public void assertRightToNodeIsNull(){
-		assertEquals(null,firstNode.right);
 	}
 }
